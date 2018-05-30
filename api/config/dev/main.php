@@ -1,14 +1,14 @@
 <?php
 $params = array_merge(
-    require __DIR__ . '/../../common/config/params.php',
-    require __DIR__ . '/../../common/config/params-local.php',
+    require __DIR__ . '/../../../common/config/' . YII_ENV . '/params.php',
+    require __DIR__ . '/../../../common/config/' . YII_ENV . '/params-local.php',
     require __DIR__ . '/params.php',
     require __DIR__ . '/params-local.php'
 );
 
 return [
     'id' => 'app-api',
-    'basePath' => dirname(__DIR__),
+    'basePath' => dirname(dirname(__DIR__)),
     'controllerNamespace' => 'api\controllers',
     'bootstrap' => ['log'],
     'defaultRoute' => 'index/index/index',
